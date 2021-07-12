@@ -39,7 +39,7 @@ const InputSetup = () => {
   Input.max = "50";
   Input.value = numberOfCharacters;
 
-  Input.onchange = (e) => {
+  Input.oninput = (e) => {
     numberOfCharacters = e.target.value;
     SliderValue.value = numberOfCharacters;
   };
