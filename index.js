@@ -71,12 +71,9 @@ const UppercaseSetup = () => {
 
   UppercaseCheckbox.onchange = () => {
     IncludeUppercase = !IncludeUppercase;
-    if (IncludeUppercase) {
-      charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    } else {
-      const newStr = charset.replace("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "");
-      charset = newStr;
-    }
+
+    if (IncludeUppercase) charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    else charset = charset.replace("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "");
   };
 };
 
@@ -95,12 +92,9 @@ const NumbersSetup = () => {
 
   NumbersCheckbox.onchange = () => {
     IncludeNumbers = !IncludeNumbers;
-    if (IncludeNumbers) {
-      charset += "0123456789";
-    } else {
-      const newStr = charset.replace("0123456789", "");
-      charset = newStr;
-    }
+
+    if (IncludeNumbers) charset += "0123456789";
+    else charset = charset.replace("0123456789", "");
   };
 };
 
@@ -119,12 +113,9 @@ const SymbolsSetup = () => {
 
   SymbolsCheckbox.onchange = () => {
     IncludeSymbols = !IncludeSymbols;
-    if (IncludeSymbols) {
-      charset += "!#$%&*+-=?@^_{}[]()/'`~,;:.<>";
-    } else {
-      const newStr = charset.replace("!#$%&*+-=?@^_{}[]()/'`~,;:.<>", "");
-      charset = newStr;
-    }
+
+    if (IncludeSymbols) charset += "!#$%&*+-=?@^_{}[]()/'`~,;:.<>";
+    else charset = charset.replace("!#$%&*+-=?@^_{}[]()/'`~,;:.<>", "");
   };
 };
 
