@@ -22,6 +22,17 @@ const OutputSetup = () => {
   Output.id = "output";
 };
 
+
+const copySetup = () => {
+  const copyButton = document.createElement("button")
+  copyButton.textContent = "Copy to clipboard"
+  document.body.append(copyButton)
+  
+
+  copyButton.onclick = () => navigator.clipboard.writeText(document.querySelector(".output").textContent)
+}
+
+
 const InputSetup = () => {
   const InputDiv = document.createElement("div");
   const InputText = document.createElement("span");
@@ -128,6 +139,7 @@ const ButtonSetup = () => {
 
 TitleSetup();
 OutputSetup();
+copySetup()
 InputSetup();
 UppercaseSetup();
 NumbersSetup();
